@@ -1,0 +1,1 @@
+get '/treeview/projects', to: 'treeview#projects'
