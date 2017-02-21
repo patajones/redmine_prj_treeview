@@ -1,13 +1,11 @@
-#Redmine PRJ Treeview Plugin
+=Redmine PRJ Treeview Plugin
 
 Redmine PRJ Treeview Plugin is a simple Redmine plugin to show up the projects as a tree.
 The plugin uses the library maxazan jquery-treegrid https://github.com/maxazan/jquery-treegrid
 
-##Installation
+==Installation
 
-```
-git clone https://github.com/patajones/redmine_prj_treeview.git plugins/redmine_prj_treeview
-```
+  git clone https://github.com/patajones/redmine_prj_treeview.git plugins/redmine_prj_treeview
 
 Do not need migrate.
 
