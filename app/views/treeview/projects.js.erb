@@ -1,1 +1,1 @@
-$('#projects-index').html( `<%=render_project_treeview @project_tree %>` )
+$('#projects-index').html('<%= escape_javascript(render_project_treeview @project_tree) %>')
