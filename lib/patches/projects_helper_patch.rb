@@ -17,7 +17,7 @@ module RedminePrjTreeview::Patches
 		
 		module InstanceMethods	
 			def render_project_hierarchy_with_treeview(projects)				
-				href = "/treeview/projects?ids=#{projects.map{|p| p.id}.join(",")}"
+				href = "treeview/projects?ids=#{projects.map{|p| p.id}.join(",")}"
 				content_tag("script", "$(window).load(function() { $.ajax({type: 'GET', url: '#{href}', headers: {Accept: 'text/javascript'}}) });".html_safe)
 			end
 			
