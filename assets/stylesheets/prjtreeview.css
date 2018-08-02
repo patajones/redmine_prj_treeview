@@ -1,0 +1,10 @@
+#projects-index {
+  column-count: 1;
+  column-width: 100%;
+  -webkit-column-count: 1;
+  -webkit-column-width: 100%;
+  -webkit-column-gap : 0;
+  -moz-column-count: 1;
+  -moz-column-width: 100%;
+  -moz-column-gap : 0;
+}

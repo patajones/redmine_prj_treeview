@@ -6,6 +6,7 @@ module TreeviewHelper
 		s << stylesheet_link_tag("responsive.css", :plugin => "redmine_prj_treeview")
 		s << stylesheet_link_tag("bootstrap.table.css", :plugin => "redmine_prj_treeview")
 		s << stylesheet_link_tag("jquery.treegrid.css", :plugin => "redmine_prj_treeview")
+		s << stylesheet_link_tag("prjtreeview.css", :plugin => "redmine_prj_treeview")
 		s << javascript_include_tag("jquery.treegrid.min.js", :plugin => "redmine_prj_treeview")
 		s << javascript_include_tag("jquery.treegrid.js", :plugin => "redmine_prj_treeview")
 		s << javascript_include_tag("jquery.cookie.js", :plugin => "redmine_prj_treeview")
