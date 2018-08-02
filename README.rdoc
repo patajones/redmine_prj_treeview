@@ -9,3 +9,6 @@ The plugin uses the library maxazan jquery-treegrid https://github.com/maxazan/j
 
 Do not need migrate.
 
+==Try in Docker
+
+{<img src="https://raw.githubusercontent.com/play-with-docker/stacks/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png" alt="Try in Docker" />}[http://play-with-docker.com/?stack=https://raw.githubusercontent.com/patajones/redmine_prj_treeview/master/docker-compose.yml]
