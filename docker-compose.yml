@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+  git:
+    image: alpine/git
+    command: clone https://github.com/patajones/redmine_prj_treeview.git /plugins/redmine_prj_treeview
+    volumes:
+      - type: volume
+        source: plugins
+        target: /plugins
+        volume:
+          nocopy: true
+      
+  redmine:
+    image: redmine:3.4.6
+    environment:
+      - "RAILS_ENV=development"
+      - "REDMINE_PLUGINS_MIGRATE=yes"
+    volumes:
+      - type: volume
+        source: plugins
+        target: /usr/src/redmine/plugins
+        read_only: true
+        volume:
+          nocopy: true
+    ports:
+      - "8000:3000"
+      
+volumes:
+  plugins:
