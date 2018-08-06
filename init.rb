@@ -4,7 +4,7 @@ require 'redmine_prj_treeview'
 Redmine::Plugin.register :redmine_prj_treeview do
   name 'Redmine Prj Treeview plugin'
   description 'Redmine plugin to show up the projects as a tree'
-  version '0.0.1'
+  version '1.1.0'
   requires_redmine :version_or_higher => '3.1.0'
 end
 
