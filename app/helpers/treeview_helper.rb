@@ -13,11 +13,11 @@ module TreeviewHelper
 			
 		index = 0
 		s_linhas = ""
-		parent_classes = []		
-		@scope.order(:lft).each do |project|		   
+		parent_classes = []
+		@scope.order(:lft).each do |project|
 			index += 1
-			parent_classes.pop while (parent_classes.length > 0) && parent_classes.last[0] != project.parent_id			
-			parent_class = parent_classes.length > 0 ? parent_classes.last[1] : ""			
+			parent_classes.pop while (parent_classes.length > 0) && parent_classes.last[0] != project.parent_id
+			parent_class = parent_classes.length > 0 ? parent_classes.last[1] : ""
 			s_linhas << content_tag('tr', inner_row_project(project), :class => "treegrid-#{index} #{parent_class}", :id => "project_id_#{project.id}")
 			parent_classes.push([project.id, "treegrid-parent-#{index}"])
 		end		
@@ -30,7 +30,7 @@ module TreeviewHelper
 	private
 	
 	def inner_row_project(project)
-		content = content_tag('td', link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}"))				
+		content = content_tag('td', link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'icon icon-fav my-project' : nil}"))				
 		description = project.description.present? ? textilizable(project.short_description, :project => project) : ""
 		s_coluna_wiki = content_tag('div', description, :style => "max-width: 500px;")
 		content << content_tag('td', s_coluna_wiki, :class => "wiki description")
